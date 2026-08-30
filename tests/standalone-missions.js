@@ -45,6 +45,7 @@ context.URL.revokeObjectURL = ()=>{};
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(__dirname,'..','app.js'),'utf8'), context, {filename:'app.js'});
 vm.runInContext(fs.readFileSync(path.join(__dirname,'..','mission-fresh.js'),'utf8'), context, {filename:'mission-fresh.js'});
+vm.runInContext(fs.readFileSync(path.join(__dirname,'..','mission-runtime.js'),'utf8'), context, {filename:'mission-runtime.js'});
 
 const evalx = code => vm.runInContext(code, context);
 evalx('startDemo()');
