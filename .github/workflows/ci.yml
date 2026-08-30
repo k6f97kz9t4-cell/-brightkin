@@ -19,7 +19,9 @@ jobs:
           node-version: '24'
       - name: Behavioral regression suite
         run: node tests/run-tests.js
+      - name: Standalone Joy Mission regression suite
+        run: node tests/standalone-missions.js
       - name: GitHub Pages compatibility suite
         run: node tests/pages-tests.js
       - name: Syntax checks
-        run: node --check app.js && node --check sw.js
+        run: node --check app.js && node --check mission-fresh.js && node --check sw.js
