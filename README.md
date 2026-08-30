@@ -23,7 +23,18 @@ Subscription billing is intentionally not included yet.
 
 ## GitHub deployment
 
-The repository is the source of truth. GitHub Actions runs the behavioral regression suite on each push to `main`, and the Pages workflow publishes the static application to GitHub Pages.
+This repository is the source of truth. `BrightKin CI` runs the behavioral regression suite, GitHub Pages compatibility suite, and JavaScript syntax checks on pushes to `main` and on pull requests.
+
+BrightKin is intentionally deployable with GitHub Pages' built-in branch publishing, with no Vercel dependency and no custom deployment service required.
+
+One-time repository setting:
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Choose **main** and **/(root)**, then save.
+
+After that, every update committed to `main` is automatically published by GitHub Pages. For this repository the Pages address is expected to be:
+
+`https://k6f97kz9t4-cell.github.io/-brightkin/`
 
 ## Privacy
 
