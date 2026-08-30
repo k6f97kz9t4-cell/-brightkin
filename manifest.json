@@ -1,0 +1,18 @@
+{
+  "name": "BrightKin \u2014 More good days together",
+  "short_name": "BrightKin",
+  "description": "A private, local-first joy engine for real-world human connection.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f2ea",
+  "theme_color": "#f7f2ea",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
