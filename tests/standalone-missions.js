@@ -7,6 +7,7 @@ const nodeCrypto = require('crypto');
 
 const elements = new Map();
 const selectorState = new Map();
+elements.set('app',{innerHTML:'',textContent:'',style:{},appendChild(){},replaceChildren(){}});
 const documentMock = {
   getElementById(id){ return elements.get(id) || null; },
   querySelectorAll(sel){ return selectorState.get(sel) || []; },
