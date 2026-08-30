@@ -21,6 +21,14 @@ jobs:
             echo "Bootstrap already completed."
             exit 0
           fi
+          echo "Checking staged payload..."
+          wc -c bootstrap/part-*
+          sha256sum bootstrap/part-*
+          echo "4591c6ff75d6e074f9ab554303f0f06d574329d4304803925836e1af2ab9b316  bootstrap/part-00" | sha256sum -c -
+          echo "7c13a67a077982a46e8216bf87579b3a8a0a9c27b02470a070cf4f92242e72d6  bootstrap/part-01" | sha256sum -c -
+          echo "802684f1e860e45f0c200c1eae67f6ac52c1ca2014d2d2fc596705090c9f1035  bootstrap/part-02" | sha256sum -c -
+          echo "55957229db33834309d8e7f52e60840f6c3d8b75560ad8c6cf9de25fe8607ccc  bootstrap/part-03" | sha256sum -c -
+          echo "5d1f0df812a3d4ec895c2c4f86a06015f2433d77bd5722e3e915b226578853c6  bootstrap/part-04" | sha256sum -c -
           cat bootstrap/part-* > /tmp/brightkin.b64
           base64 -d /tmp/brightkin.b64 > /tmp/brightkin.tar.gz
           echo "5f4e228719dba09dc524fa09080cc7f5348e2de5a6a4202f786e7c2f75d78ee9  /tmp/brightkin.tar.gz" | sha256sum -c -
