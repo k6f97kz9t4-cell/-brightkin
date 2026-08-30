@@ -24,4 +24,4 @@ jobs:
       - name: GitHub Pages compatibility suite
         run: node tests/pages-tests.js
       - name: Syntax checks
-        run: node --check app.js && node --check mission-fresh.js && node --check sw.js
+        run: node --check app.js && node --check mission-fresh.js && node --check mission-runtime.js && node --check sw.js
